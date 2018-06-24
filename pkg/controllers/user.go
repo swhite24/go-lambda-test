@@ -109,7 +109,7 @@ func (uc *UserController) getUser(c *gin.Context) {
 	c.JSON(http.StatusOK, gin.H{"success": true, "user": user})
 }
 
-// genHash created a random hash of alphanumeric characters of provided length
+// genHash creates a random hash of alphanumeric characters of provided length
 func genHash(n int) string {
 	b := make([]byte, n)
 	for i := range b {
