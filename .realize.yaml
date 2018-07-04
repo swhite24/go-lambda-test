@@ -1,0 +1,30 @@
+settings:
+  legacy:
+    force: false
+    interval: 0s
+schema:
+- name: go-lambda-test
+  path: cmd
+  commands:
+    clean:
+      status: true
+    vet:
+      status: true
+    fmt:
+      status: true
+    test:
+      status: true
+    install:
+      status: true
+    run:
+      status: true
+  watcher:
+    extensions:
+    - go
+    paths:
+    - /
+    - ../pkg
+    ignored_paths:
+    - ../.git
+    - ../.realize
+    - ../vendor
